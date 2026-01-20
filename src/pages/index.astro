@@ -2,55 +2,78 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead
-			title={SITE_TITLE}
-			description="Modern web experiences built with Astro and deployed on Cloudflare Workers & Pages."
-		/>
-	</head>
-	<body>
-		<Header />
+<BaseHead
+	title={SITE_TITLE}
+	description="Modern web experiences built with Astro and deployed on Cloudflare Workers & Pages."
+/>
 
-		<main class="container">
-			<!-- HERO -->
-			<section class="hero">
-				<h1>Astro + Cloudflare Demo</h1>
-				<p class="subtitle">
-					A fast, secure, and edge-first website built with Astro and deployed globally on
-					Cloudflare Workers & Pages.
-				</p>
+<Header />
 
-				<div class="actions">
-					<a href="/blog" class="primary">Read the Blog</a>
-					<a href="/about" class="secondary">About this Project</a>
-				</div>
-			</section>
+<main class="container">
+	<!-- HERO -->
+	<section class="hero">
+		<h1>Astro + Cloudflare Demo</h1>
+		<p class="subtitle">
+			A fast, secure, and edge-first website built with Astro and deployed globally on
+			Cloudflare Workers & Pages.
+		</p>
 
-			<!-- VALUE PROPS -->
-			<section class="features">
-				<div>
-					<h2>⚡ Performance by Default</h2>
-					<p>
-						Static-first rendering with Astro and edge delivery via Cloudflare ensures low latency
-						worldwide.
-					</p>
-				</div>
+		<div class="actions">
+			<a href="/blog" class="primary">Read the Blog</a>
+			<a href="/about" class="secondary">About this Project</a>
+		</div>
+	</section>
 
-				<div>
-					<h2>🛡️ Built-in Security</h2>
-					<p>
-						Protected by Cloudflare’s global network, showcasing how security is integrated, not
-						added later.
-					</p>
-				</div>
+	<!-- VALUE PROPS -->
+	<section class="features">
+		<div>
+			<h2>⚡ Performance by Default</h2>
+			<p>
+				Static-first rendering with Astro and edge delivery via Cloudflare ensures low latency
+				worldwide.
+			</p>
+		</div>
 
-				<div>
-					<h2>🌍 Edge Native</h2>
-					<p>
-						Deployed at the edge using Workers & Pa
+		<div>
+			<h2>🛡️ Built-in Security</h2>
+			<p>
+				Protected by Cloudflare’s global network, showcasing how security is integrated, not
+				added later.
+			</p>
+		</div>
+
+		<div>
+			<h2>🌍 Edge Native</h2>
+			<p>
+				Deployed at the edge using Workers & Pages for global scalability and resilience.
+			</p>
+		</div>
+	</section>
+</main>
+
+<Footer />
+
+<style>
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem;
+	}
+
+	.hero {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.subtitle {
+		color: #666;
+		max-width: 720px;
+		margin: 1rem auto 2rem;
+	}
+
+	.actio
+
 
