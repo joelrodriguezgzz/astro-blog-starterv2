@@ -1,0 +1,157 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Architecture | Astro + Cloudflare"
+			description="Edge-first architecture using Astro, Cloudflare Pages, and Workers."
+		/>
+	</head>
+
+	<body>
+		<Header />
+
+		<main class="container">
+			<!-- HERO -->
+			<section class="hero">
+				<h1>Architecture</h1>
+				<p>
+					This project demonstrates a modern, edge-first web architecture built with
+					<strong>Astro</strong> and deployed globally using
+					<strong>Cloudflare Workers & Pages</strong>.
+				</p>
+			</section>
+
+			<!-- DIAGRAM -->
+			<section class="diagram">
+				<h2>High-level Flow</h2>
+				<pre>
+User Browser
+     │
+     ▼
+Cloudflare Global Edge
+     │
+     ├── Static Assets (Astro → Pages)
+     │
+     └── Dynamic Logic (Cloudflare Workers)
+     │
+     ▼
+Optional APIs / Services
+				</pre>
+			</section>
+
+			<!-- COMPONENTS -->
+			<section class="components">
+				<h2>Core Components</h2>
+
+				<div class="grid">
+					<div class="card">
+						<h3>Astro</h3>
+						<p>
+							A content-focused framework that ships minimal JavaScript by default,
+							optimizing performance and page load times.
+						</p>
+					</div>
+
+					<div class="card">
+						<h3>Cloudflare Pages</h3>
+						<p>
+							Serves pre-rendered static assets from the closest edge location,
+							providing low latency and high availability.
+						</p>
+					</div>
+
+					<div class="card">
+						<h3>Cloudflare Workers</h3>
+						<p>
+							Handles dynamic logic at the edge, such as API responses, request
+							manipulation, or geo-based logic.
+						</p>
+					</div>
+
+					<div class="card">
+						<h3>Security & Performance</h3>
+						<p>
+							DDoS protection, TLS, caching, and rate limiting are built in by default
+							at the Cloudflare edge.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- WHY IT MATTERS -->
+			<section class="why">
+				<h2>Why Edge-First?</h2>
+				<ul>
+					<li>🌍 Global performance without regional infrastructure</li>
+					<li>⚡ Lower latency by eliminating centralized origins</li>
+					<li>🛡️ Security enforced before traffic reaches the app</li>
+					<li>📈 Scales automatically with traffic</li>
+				</ul>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem;
+	}
+
+	.hero {
+		margin-bottom: 3rem;
+	}
+
+	.hero h1 {
+		font-size: 2.4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.diagram pre {
+		background: #f7f7f7;
+		padding: 1.5rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		font-size: 0.9rem;
+	}
+
+	.components {
+		margin-top: 3rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	.card {
+		padding: 1.2rem;
+		border: 1px solid #e5e5e5;
+		border-radius: 8px;
+		background: white;
+	}
+
+	.card h3 {
+		margin-bottom: 0.5rem;
+	}
+
+	.why {
+		margin-top: 3rem;
+	}
+
+	.why ul {
+		margin-top: 1rem;
+		padding-left: 1.2rem;
+	}
+</style>
